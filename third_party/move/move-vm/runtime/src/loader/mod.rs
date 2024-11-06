@@ -842,6 +842,8 @@ impl LoaderV1 {
         I: IntoIterator<Item = (&'a AccountAddress, &'a IdentStr)>,
         I::IntoIter: DoubleEndedIterator,
     {
+        println!("Rust(aptos-core): We use loaderV1");
+
         // Initialize the work list (stack) and the map of visited modules.
         //
         // TODO: Determine the reserved capacity based on the max number of dependencies allowed.

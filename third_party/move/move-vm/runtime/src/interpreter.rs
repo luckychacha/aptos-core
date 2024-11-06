@@ -136,6 +136,7 @@ impl Interpreter {
         function: LoadedFunction,
         args: Vec<Value>,
     ) -> VMResult<Vec<Value>> {
+        println!("Rust(aptos-core): execute_main");
         let mut locals = Locals::new(function.local_tys().len());
         for (i, value) in args.into_iter().enumerate() {
             locals
